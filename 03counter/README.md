@@ -11,3 +11,22 @@ React provides the useState hook that returns an array.
 Index 0: name of the state(variable)
 Index 1: function that propogates changes in state to all the UI elements that use it somehow, be it as innerHTML, attribute or
 style property and renders the new changes on the browser window
+
+
+## Interview Questions
+
+What will be the output of following increment handler if initial value is 10?
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+
+On every click of the button the value of the counter will increment by one. The reason being that React Fiber processes these operations as a batch. It identifies that since we are doing the same task again and again, it optimizes the increment operation to one time.
+
+But what if we want the counter to increase by four at every click ? Use callback
+
+    setCounter(prevcounter => prevcounter + 1)
+    setCounter(prevcounter => prevcounter + 1)
+    setCounter(prevcounter => prevcounter + 1)
+    setCounter(prevcounter => prevcounter + 1)
+

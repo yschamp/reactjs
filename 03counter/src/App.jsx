@@ -7,8 +7,11 @@ function App() {
   let [ counter, setCounter ] = useState(5)
 
   function increaseValue(){
-    counter = counter + 1
-    setCounter(counter)
+    // counter = counter + 1
+    setCounter(counter => counter + 1)
+    setCounter(counter => counter + 1)
+    setCounter(counter => counter + 1)
+    setCounter(counter => counter + 1)
   }
 
   function decreaseValue(){
